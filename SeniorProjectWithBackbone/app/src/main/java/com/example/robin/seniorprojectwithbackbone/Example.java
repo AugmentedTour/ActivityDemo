@@ -12,7 +12,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class Example extends AppActivityBuilderMethods {
+public class Example extends AppActivityBuilderMethods { //make sure it extends this, it gives access to the methods
 
     // Put in the URL this activity will be parsing from
     private final String THIS_ONES_URL = "https://www.bellevuecollege.edu/artshum/";
@@ -25,7 +25,7 @@ public class Example extends AppActivityBuilderMethods {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); //doesn't have to be activity_main, but it's built to work with this.
 
         // --- Toolbar stuff, don't forget to set the name ---
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

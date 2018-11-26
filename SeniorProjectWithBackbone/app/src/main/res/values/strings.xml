@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SeniorProjectWithBackbone</string>
+    <string name="help_information">This activity here can contain all of our help information, specifically how to operate the app put into nice simple terms. This help menu will be accessible from anywhere any probably could contain some helpful pictures and images to look all nice and professional.</string>
+</resources>

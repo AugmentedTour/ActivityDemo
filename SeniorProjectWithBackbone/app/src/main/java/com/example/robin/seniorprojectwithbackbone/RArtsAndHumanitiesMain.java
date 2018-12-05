@@ -13,7 +13,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class ArtsAndHumanitiesMain extends AppActivityBuilderMethods {
+public class RArtsAndHumanitiesMain extends AppActivityBuilderMethods {
 
     // Put in the URL this activity will be parsing from
     private final String THIS_ONES_URL = "https://www.bellevuecollege.edu/artshum/";
@@ -46,7 +46,7 @@ public class ArtsAndHumanitiesMain extends AppActivityBuilderMethods {
         mainInfo = textViewBuilder("Loading...", bodyLayout);
         officeHours = textViewBuilder("Loading...", bodyLayout);
         linkButtonBuilder("Website", "https://www.bellevuecollege.edu/artshum/", true, bodyLayout);
-        activityButtonBuilder("Departments", ArtsAndHumanitiesMain.this, ArtsAndHumanitiesMain.class, true, bodyLayout);
+        activityButtonBuilder("Departments", RArtsAndHumanitiesMain.this, RArtsAndHumanitiesDepartments.class, true, bodyLayout);
         importantLinks = textViewBuilder("Important Links:", bodyLayout);
         linkButtonBuilder("Facebook", "https://www.facebook.com/pages/Arts-Humanities-Bellevue-College/193444107342452", false, bodyLayout);
         linkButtonBuilder("Faculty Resources", "https://www.bellevuecollege.edu/artshum/faculty-resources/", false, bodyLayout);

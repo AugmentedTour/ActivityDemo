@@ -30,11 +30,11 @@ public class BuildingSelect extends AppActivityBuilderMethods {
         // --- bodyLayout ---
         textViewBuilder(instructions, bodyLayout);
         //We'll end up removing this button and activity later, but for now it's useful as an example.
-        activityButtonBuilder("Example", BuildingSelect.this, Example.class, false, bodyLayout);
-        activityButtonBuilder("Student Housing", BuildingSelect.this, BuildingSelect.class, true, bodyLayout);
-        activityButtonBuilder("L Building", BuildingSelect.this, BuildingSelect.class, true, bodyLayout);
+        //activityButtonBuilder("Example", BuildingSelect.this, Example.class, false, bodyLayout);
+        activityButtonBuilder("Student Housing", BuildingSelect.this, HousingBuilding.class, false, bodyLayout);
+        activityButtonBuilder("L Building", BuildingSelect.this, LBuilding.class, false, bodyLayout);
         activityButtonBuilder("R Building", BuildingSelect.this, RBuilding.class, false, bodyLayout);
-        activityButtonBuilder("S Building", BuildingSelect.this, BuildingSelect.class, true, bodyLayout);
+        activityButtonBuilder("S Building", BuildingSelect.this, SBuilding.class, false, bodyLayout);
 
 
     }

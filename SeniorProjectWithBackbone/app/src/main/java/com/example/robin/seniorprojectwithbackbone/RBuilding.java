@@ -3,7 +3,6 @@ package com.example.robin.seniorprojectwithbackbone;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class RBuilding extends AppActivityBuilderMethods {
 
@@ -38,11 +37,11 @@ public class RBuilding extends AppActivityBuilderMethods {
 
         // --- bodyLayout ---
         textViewBuilder(info, bodyLayout);
-        activityButtonBuilder("Arts and Humanities", RBuilding.this, ArtsAndHumanitiesMain.class, false, bodyLayout);
-        activityButtonBuilder("Dance Studio", RBuilding.this, RBuilding.class, true, bodyLayout);
-        activityButtonBuilder("ESL", RBuilding.this, RBuilding.class, true, bodyLayout);
-        activityButtonBuilder("HR", RBuilding.this, RBuilding.class, true, bodyLayout);
-        activityButtonBuilder("ABE", RBuilding.this, RBuilding.class, true, bodyLayout);
+        activityButtonBuilder("Arts and Humanities", RBuilding.this, RArtsAndHumanitiesMain.class, false, bodyLayout);
+        activityButtonBuilder("Dance Studio", RBuilding.this, RDanceMain.class, false, bodyLayout);
+        activityButtonBuilder("ELI", RBuilding.this, RELIMain.class, true, bodyLayout);
+        textViewBuilder("Human Resources (HR): Location R130(425) | Phone 564-2274(425) | Fax 564-3173", bodyLayout);
+        activityButtonBuilder("ABE", RBuilding.this, RABEMain.class, true, bodyLayout);
 
 
     }

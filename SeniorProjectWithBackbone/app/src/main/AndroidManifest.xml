@@ -17,13 +17,31 @@
             </intent-filter>
         </activity>
         <activity android:name=".BuildingSelect"/>
+        <activity android:name=".HelpActivity" />
         <activity android:name=".Example" />
+        <!-- Housing building -->
+        <activity android:name=".HousingBuilding" />
+        <activity android:name=".HousingGeneralInformation" />
+        <activity android:name=".HousingAmeneties" />
+        <!-- L building -->
+        <activity android:name=".LBuilding" />
+        <activity android:name=".LScienceDivisionActivity" />
+        <activity android:name=".LInteriorDesignActivity" />
+        <!-- R building -->
         <activity android:name=".RBuilding" />
-        <activity android:name=".ArtsAndHumanitiesMain" />
-        <activity android:name=".HelpActivity"></activity>
+        <activity android:name=".RArtsAndHumanitiesMain" />
+        <activity android:name=".RArtsAndHumanitiesDepartments" />
+        <activity android:name=".RDanceMain" />
+        <activity android:name=".RELIMain" />
+        <activity android:name=".RELIPrograms" />
+        <activity android:name=".RABEMain" />
+        <!-- S building -->
+        <activity android:name=".SBuilding" />
+        <activity android:name=".SScienceDepartments" />
     </application>
 
     <!-- this is bad practice, we'll want to change this out for an actual internet permission ask thing -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
 </manifest>

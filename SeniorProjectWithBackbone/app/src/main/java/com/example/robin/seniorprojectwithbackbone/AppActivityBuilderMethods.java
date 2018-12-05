@@ -274,7 +274,8 @@ public class AppActivityBuilderMethods extends AppCompatActivity {
                 startActivity(startChildActivityIntent);
                 return true;
             case R.id.back_button:
-                finish();
+                Intent startBackActivityIntent = new Intent(this, BuildingSelect.class);
+                startActivity(startBackActivityIntent);
                 return true;
             default:
                 // This means that the pressed button wasn't recognized

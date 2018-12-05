@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -19,7 +20,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class LScienceDivisionActivity extends AppCompatActivity {
+public class LScienceDivisionActivity extends AppActivityBuilderMethods {
     private class DownloadDepartmentsTask extends AsyncTask<URL, Integer, Long> {
         List<String> departments = new ArrayList<>();
 
@@ -97,5 +98,10 @@ public class LScienceDivisionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_science_division);
         //thread.start();
         new DownloadDepartmentsTask().execute();
+
+        // --- Toolbar stuff, don't forget to set the name ---
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Science Division");
+        setSupportActionBar(toolbar);
     }
 }

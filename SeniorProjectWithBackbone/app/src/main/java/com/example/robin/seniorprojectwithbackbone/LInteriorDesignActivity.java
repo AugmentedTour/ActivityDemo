@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 
-public class LInteriorDesignActivity extends AppCompatActivity {
+public class LInteriorDesignActivity extends AppActivityBuilderMethods{
 
     public void associatedegree (View view){
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bellevuecollege.edu/interiordesign/programs/aa/"));

@@ -40,7 +40,8 @@ public class RBuilding extends AppActivityBuilderMethods {
         activityButtonBuilder("Arts and Humanities", RBuilding.this, RArtsAndHumanitiesMain.class, false, bodyLayout);
         activityButtonBuilder("Dance Studio", RBuilding.this, RDanceMain.class, false, bodyLayout);
         activityButtonBuilder("ELI", RBuilding.this, RELIMain.class, true, bodyLayout);
-        textViewBuilder("Human Resources (HR): Location R130(425) | Phone 564-2274(425) | Fax 564-3173", bodyLayout);
+        textViewBuilder("Human Resources (HR): Location R130(425) | Fax 564-3173", bodyLayout);
+        phoneBuilder("HR", "564-2274(425)", bodyLayout);
         activityButtonBuilder("ABE", RBuilding.this, RABEMain.class, true, bodyLayout);
 
 

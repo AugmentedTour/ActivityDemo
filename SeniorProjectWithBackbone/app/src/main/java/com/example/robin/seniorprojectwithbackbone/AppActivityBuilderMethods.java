@@ -2,8 +2,12 @@ package com.example.robin.seniorprojectwithbackbone;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,14 +23,26 @@ import android.widget.Toast;
 public class AppActivityBuilderMethods extends AppCompatActivity {
 
     private final int SYMBOL_SIZE = 100;
+    private final String blue = "#00427f";
 
+
+    //myTextView.setText(Html.fromHtml(text + "<font color=white>" + CepVizyon.getPhoneCode() + "</font><br><br>"
+    //        + getText(R.string.currentversion) + CepVizyon.getLicenseText()));
 
     //Adds a title to the selected view.
     public TextView titleBuilder (String title, LinearLayout layout) {
         TextView view = new TextView(this);
-        view.setText(title);
-        view.setTextSize(35);
+        view.setTextSize(40);
         view.setPadding(15,15,25,15);
+        view.setTypeface(Typeface.SERIF, Typeface.BOLD);
+
+        String firstLetter = title.substring(0,1);
+        String rest = title.substring(1);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            view.setText(Html.fromHtml("<font color=\"" + blue + "\">" + firstLetter + "</font><font color=\"#000000\">" + rest + "</font>", Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            view.setText(Html.fromHtml("<font color=\"" + blue + "\">" + firstLetter + "</font><font color=\"#000000\">" + rest + "</font>"));
+        }
 
         layout.addView(view);
         return view;
@@ -35,10 +51,18 @@ public class AppActivityBuilderMethods extends AppCompatActivity {
     //Adds a smaller title to the selected view. Recommended for sub-pages
     public TextView subTitleBuilder (String title, LinearLayout layout) {
         TextView view = new TextView(this);
-        view.setText(title);
         view.setTextSize(25);
         view.setGravity(Gravity.CENTER);
         view.setPadding(15,15,15,15);
+        view.setTypeface(Typeface.SERIF, Typeface.BOLD);
+
+        String firstLetter = title.substring(0,1);
+        String rest = title.substring(1);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            view.setText(Html.fromHtml("<font color=\"" + blue + "\">" + firstLetter + "</font><font color=\"#000000\">" + rest + "</font>", Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            view.setText(Html.fromHtml("<font color=\"" + blue + "\">" + firstLetter + "</font><font color=\"#000000\">" + rest + "</font>"));
+        }
 
         layout.addView(view);
         return view;
@@ -61,7 +85,11 @@ public class AppActivityBuilderMethods extends AppCompatActivity {
     public Button linkButtonBuilder (String text, String url, boolean isImportant, LinearLayout layout) {
         Button button = new Button(this);
         button.setText(text);
-        button.setTextSize(18);
+        if (text.length() > 30) {
+            button.setTextSize(15);
+        } else {
+            button.setTextSize(18);
+        }
         button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 150));
         button.setPadding(5,5,5,5);
         button.setAllCaps(false);
@@ -71,6 +99,7 @@ public class AppActivityBuilderMethods extends AppCompatActivity {
         } else {
             button.setBackgroundResource(R.drawable.not_important);
         }
+        button.setTextColor(Color.WHITE);
 
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) button.getLayoutParams();
         params.topMargin = 10;
@@ -95,10 +124,15 @@ public class AppActivityBuilderMethods extends AppCompatActivity {
     public Button activityButtonBuilder (String text, Context currentActivity, Class sendingActivity, boolean isImportant, LinearLayout layout) {
         Button button = new Button(this);
         button.setText(text);
-        button.setTextSize(18);
+        if (text.length() > 30) {
+            button.setTextSize(15);
+        } else {
+            button.setTextSize(18);
+        }
         button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 150));
         button.setPadding(5,5,5,5);
         button.setAllCaps(false);
+        button.setTextColor(Color.WHITE);
 
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) button.getLayoutParams();
         params.topMargin = 10;
@@ -129,9 +163,9 @@ public class AppActivityBuilderMethods extends AppCompatActivity {
     //creates a textView that dials but doesn't call the sent number.
     public TextView phoneBuilder (String information, final String number, LinearLayout layout) {
         TextView view = new TextView(this);
-        view.setText("> Click to dial " + information + " at: " + number);
-        view.setTextSize(18);
-        view.setHeight(150);
+        view.setText("Click to dial " + information + " \nat: " + number);
+        view.setTextSize(15);
+        view.setHeight(175);
         view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         view.setPadding(50,40,30,20);
 

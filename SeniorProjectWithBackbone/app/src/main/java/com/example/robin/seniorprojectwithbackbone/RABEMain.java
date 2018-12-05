@@ -57,6 +57,7 @@ public class RABEMain extends AppActivityBuilderMethods {
 
 
         // --- Styling ---
+        subtitle.setGravity(Gravity.CENTER);
 
         // --- Async tasks ---
         new RABEMain.ParseProgramsWebpageTask().execute("Important Links");

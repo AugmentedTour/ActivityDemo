@@ -74,6 +74,7 @@ public class RArtsAndHumanitiesDepartments extends AppActivityBuilderMethods {
         public ArrayList<String> grabData(String url) throws IOException {
             Document doc = Jsoup.connect(THIS_ONES_URL).get();
             Elements start = doc.getElementsByClass("menu");
+            start.select("ul").remove();
             ArrayList<String> myStrings = new ArrayList<String>();
 
             Elements two = start.first().getElementsByTag("a");

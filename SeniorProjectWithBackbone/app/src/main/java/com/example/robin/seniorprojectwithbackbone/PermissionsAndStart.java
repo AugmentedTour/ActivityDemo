@@ -23,11 +23,11 @@ public class PermissionsAndStart extends AppActivityBuilderMethods {
         LinearLayout everything = (LinearLayout) findViewById(R.id.everything);
 
         // --- variables ---
-        String messageString = "This is where we can put permission stuff or otherwise things " +
-                "pertaining to the start page.";
+        String messageString = "Welcome to the BC AR Tour. " +
+                "After permissions have been given, please press start to begin.";
 
         // --- Views ---
-        title = titleBuilder("Welcome!", everything);
+        title = titleBuilder("Bellevue College AR Tour", everything);
         message = textViewBuilder(messageString, everything);
         start = activityButtonBuilder("Start!", PermissionsAndStart.this, BuildingSelect.class, false, everything);
 

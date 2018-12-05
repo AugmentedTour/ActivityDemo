@@ -23,6 +23,7 @@ public class RELIMain extends AppActivityBuilderMethods {
 
     // Views I'll be editing
     TextView info;
+    TextView officeHours;
 
 
     @Override
@@ -45,6 +46,7 @@ public class RELIMain extends AppActivityBuilderMethods {
 
         // --- bodyLayout ---
         info = textViewBuilder("Loading...", bodyLayout);
+        officeHours = textViewBuilder("Loading...", bodyLayout);
         linkButtonBuilder("Apply for Admission", "https://international.bellevuecollege.edu/", true, bodyLayout);
         activityButtonBuilder("Programs", RELIMain.this, RELIPrograms.class, true, bodyLayout);
 
@@ -147,8 +149,8 @@ public class RELIMain extends AppActivityBuilderMethods {
 
     }
 
-    private class ParseInfoTask extends AsyncTask<String, Void, String> {
-        protected String doInBackground(String... urls) {
+    private class ParseInfoTask extends AsyncTask<String, Void, String[]> {
+        protected String[] doInBackground(String... urls) {
             try {
                 return grabData();
             } catch (IOException e) {
@@ -158,16 +160,24 @@ public class RELIMain extends AppActivityBuilderMethods {
         }
 
         //Use this to set all of the text things
-        protected void onPostExecute(String result) {
-            info.setText(result);
+        protected void onPostExecute(String[] result) {
+            info.setText(result[0]);
+            officeHours.setText(result[1]);
         }
 
         //Grab all the data in here and put it into a String[]
-        public String grabData() throws IOException {
+        public String[] grabData() throws IOException {
             Document doc = Jsoup.connect(THIS_ONES_URL).get();
+//            Elements content = doc.getElementsByClass("content-padding");
+//            List<String> finder = content.eachText();
+//            return finder.get(0);
             Elements content = doc.getElementsByClass("content-padding");
-            List<String> finder = content.eachText();
-            return finder.get(0);
+            Element fullFirst = content.next().next().first();
+            Elements splitFirst = fullFirst.getElementsByTag("p");
+
+            String[] strings = {splitFirst.first().text(), splitFirst.next().next().next().next().next().first().text()};
+
+            return strings;
         }
 
     }

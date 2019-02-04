@@ -21,6 +21,8 @@
         <activity android:name=".Example" />
         <!-- F building -->
         <activity android:name=".FBuilding" />
+        <!-- G building -->
+        <activity android:name=".GBuilding" />
         <!-- Housing building -->
         <activity android:name=".HousingBuilding" />
         <activity android:name=".HousingGeneralInformation" />

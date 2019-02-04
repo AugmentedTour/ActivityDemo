@@ -19,10 +19,14 @@
         <activity android:name=".BuildingSelect"/>
         <activity android:name=".HelpActivity" />
         <activity android:name=".Example" />
+        <!-- F building -->
+        <activity android:name=".FBuilding" />
         <!-- Housing building -->
         <activity android:name=".HousingBuilding" />
         <activity android:name=".HousingGeneralInformation" />
         <activity android:name=".HousingAmeneties" />
+        <!-- K building -->
+        <activity android:name=".KBuilding" />
         <!-- L building -->
         <activity android:name=".LBuilding" />
         <activity android:name=".LScienceDivisionActivity" />
@@ -38,6 +42,9 @@
         <!-- S building -->
         <activity android:name=".SBuilding" />
         <activity android:name=".SScienceDepartments" />
+        <!-- U building -->
+        <activity android:name=".UBuilding" />
+
     </application>
 
     <!-- this is bad practice, we'll want to change this out for an actual internet permission ask thing -->

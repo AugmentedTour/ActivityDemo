@@ -3,11 +3,12 @@ package com.example.robin.seniorprojectwithbackbone;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-public class GBuilding extends AppActivityBuilderMethods {
+public class QEarlyLearningCenterMain extends AppActivityBuilderMethods {
+
     // Put in the URL this activity will be parsing from.
     private final String THIS_ONES_URL = "";
+
 
 
     @Override
@@ -17,7 +18,7 @@ public class GBuilding extends AppActivityBuilderMethods {
 
         // --- Toolbar stuff, don't forget to set the name ---
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("G Building");
+        toolbar.setTitle("Q Building");
         setSupportActionBar(toolbar);
 
         // --- Layouts ---
@@ -25,20 +26,20 @@ public class GBuilding extends AppActivityBuilderMethods {
         LinearLayout bodyLayout = (LinearLayout) findViewById(R.id.bodyLayout);
 
         // --- Variables ---
-        String info = "The G Building is the Bellevue College gymnasium." +
-                " This building is used for BC physical education classes and is used by other local " +
-                "schools for sporting events, science fairs, and graduations. " +
-                "The locker rooms and fitness center are currently under construction. " +
-                "The fitness center has moved to A-265 during the remodel." +
-                "The wellness center is currently closed."; //will want to alter later
+        String info = "The Early Learning Center has space for 190 children between the ages of 6 months and 6 years." +
+                " Priority is given to BC/EWU students, faculty, staff and Costco employees."; //will want to alter later
 
         // --- topLayout ---
-        titleBuilder("G Building", topLayout);
-        isAccessible(topLayout);
-
+        titleBuilder("Early Learning Center", topLayout);
+        hasAllGendersBathroom(topLayout);
+        hasComputers(topLayout);
 
         // --- bodyLayout ---
         textViewBuilder(info, bodyLayout);
-        linkButtonBuilder("Health and Physical Education Website", "https://www.bellevuecollege.edu/pe/", true, bodyLayout);
+        phoneBuilder("Early Learing Center", "(425)-564 2240", bodyLayout);
+        linkButtonBuilder("Join Waitlist", "https://www.myprocare.com/Login/EnterEmail", true, bodyLayout);
+
+
     }
+
 }

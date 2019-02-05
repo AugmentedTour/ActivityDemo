@@ -5,7 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class GBuilding extends AppActivityBuilderMethods {
+public class EBuilding extends AppActivityBuilderMethods {
     // Put in the URL this activity will be parsing from.
     private final String THIS_ONES_URL = "";
 
@@ -17,7 +17,7 @@ public class GBuilding extends AppActivityBuilderMethods {
 
         // --- Toolbar stuff, don't forget to set the name ---
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("G Building");
+        toolbar.setTitle("E Building");
         setSupportActionBar(toolbar);
 
         // --- Layouts ---
@@ -25,20 +25,16 @@ public class GBuilding extends AppActivityBuilderMethods {
         LinearLayout bodyLayout = (LinearLayout) findViewById(R.id.bodyLayout);
 
         // --- Variables ---
-        String info = "The G Building is the Bellevue College gymnasium." +
-                " This building is used for BC physical education classes and is used by other local " +
-                "schools for sporting events, science fairs, and graduations. " +
-                "The locker rooms and fitness center are currently under construction. " +
-                "The fitness center has moved to A-265 during the remodel." +
-                "The wellness center is currently closed."; //will want to alter later
+        String info = "The E Building houses The Carlson Theatre and The Stopgap Theatre." +
+                " This building  is used by the theatre arts department for dance, drama, and music performances."; //will want to alter later
 
         // --- topLayout ---
-        titleBuilder("G Building", topLayout);
+        titleBuilder("E Building", topLayout);
         isAccessible(topLayout);
 
 
         // --- bodyLayout ---
         textViewBuilder(info, bodyLayout);
-        linkButtonBuilder("Health and Physical Education Website", "https://www.bellevuecollege.edu/pe/", true, bodyLayout);
+        linkButtonBuilder("Carlson Theatre History", "https://www.bellevuecollege.edu/theatrearts/carlson-theatre/", true, bodyLayout);
     }
 }

@@ -3,11 +3,12 @@ package com.example.robin.seniorprojectwithbackbone;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-public class GBuilding extends AppActivityBuilderMethods {
+public class QBuilding extends AppActivityBuilderMethods {
+
     // Put in the URL this activity will be parsing from.
     private final String THIS_ONES_URL = "";
+
 
 
     @Override
@@ -17,7 +18,7 @@ public class GBuilding extends AppActivityBuilderMethods {
 
         // --- Toolbar stuff, don't forget to set the name ---
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("G Building");
+        toolbar.setTitle("Q Building");
         setSupportActionBar(toolbar);
 
         // --- Layouts ---
@@ -25,20 +26,22 @@ public class GBuilding extends AppActivityBuilderMethods {
         LinearLayout bodyLayout = (LinearLayout) findViewById(R.id.bodyLayout);
 
         // --- Variables ---
-        String info = "The G Building is the Bellevue College gymnasium." +
-                " This building is used for BC physical education classes and is used by other local " +
-                "schools for sporting events, science fairs, and graduations. " +
-                "The locker rooms and fitness center are currently under construction. " +
-                "The fitness center has moved to A-265 during the remodel." +
-                "The wellness center is currently closed."; //will want to alter later
+        String info = "The Q building is home to the Early Learning Center." +
+                " This is where Early Learning students get in the field experience working with kids." +
+                " Childcare is available for kids between the ages of 6 months and 6 years. In addition to full time childcare, the " +
+                "center also offers summer programs, part time care, and classes for families."; //will want to alter later
 
         // --- topLayout ---
-        titleBuilder("G Building", topLayout);
+        titleBuilder("Q Building", topLayout);
         isAccessible(topLayout);
-
 
         // --- bodyLayout ---
         textViewBuilder(info, bodyLayout);
-        linkButtonBuilder("Health and Physical Education Website", "https://www.bellevuecollege.edu/pe/", true, bodyLayout);
+        activityButtonBuilder("Early Learning & Teacher Education", QBuilding.this, QEarlyLearningTeacherEdMain.class, false, bodyLayout);
+        activityButtonBuilder("Early Learning Center", QBuilding.this, QEarlyLearningCenterMain.class, false, bodyLayout);
+
+
+
     }
+
 }

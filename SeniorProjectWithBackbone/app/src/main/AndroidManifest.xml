@@ -19,6 +19,8 @@
         <activity android:name=".BuildingSelect"/>
         <activity android:name=".HelpActivity" />
         <activity android:name=".Example" />
+        <!-- E building -->
+        <activity android:name=".EBuilding" />
         <!-- F building -->
         <activity android:name=".FBuilding" />
         <!-- G building -->
@@ -33,6 +35,10 @@
         <activity android:name=".LBuilding" />
         <activity android:name=".LScienceDivisionActivity" />
         <activity android:name=".LInteriorDesignActivity" />
+        <!-- Q building -->
+        <activity android:name=".QBuilding" />
+        <activity android:name=".QEarlyLearningTeacherEdMain" />
+        <activity android:name=".QEarlyLearningCenterMain" />
         <!-- R building -->
         <activity android:name=".RBuilding" />
         <activity android:name=".RArtsAndHumanitiesMain" />

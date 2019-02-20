@@ -16,7 +16,7 @@ public class Example extends AppActivityBuilderMethods { //make sure it extends 
 
     // Put in the URL this activity will be parsing from
     private final String THIS_ONES_URL = "https://www.bellevuecollege.edu/artshum/";
-
+    //This is a new comment
     //These are the views we'll be altering or parsing for
     TextView mainInfo;
     TextView officeHours;

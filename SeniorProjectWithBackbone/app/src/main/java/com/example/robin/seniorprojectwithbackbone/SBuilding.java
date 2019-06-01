@@ -41,9 +41,9 @@ public class SBuilding extends AppActivityBuilderMethods {
         linkButtonBuilder("Science Division Website", "https://www.bellevuecollege.edu/science/", true, bodyLayout);
         linkButtonBuilder("Science Clubs", "https://www.bellevuecollege.edu/science/clubs/", true, bodyLayout);
         activityButtonBuilder("Departments", SBuilding.this, SScienceDepartments.class, false, bodyLayout);
-
-
-
+        activityButtonBuilder("Advising", SBuilding.this, SScienceAdvising.class, false, bodyLayout);
+        activityButtonBuilder("Science Study Center", SBuilding.this, SScienceStudyCenter.class, false, bodyLayout);
+        activityButtonBuilder("Classes in Building", SBuilding.this, SCurrentClasses.class, false, bodyLayout);
     }
 
 }

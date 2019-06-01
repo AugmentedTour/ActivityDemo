@@ -40,5 +40,6 @@ public class GBuilding extends AppActivityBuilderMethods {
         // --- bodyLayout ---
         textViewBuilder(info, bodyLayout);
         linkButtonBuilder("Health and Physical Education Website", "https://www.bellevuecollege.edu/pe/", true, bodyLayout);
+        activityButtonBuilder("Classes in Building", GBuilding.this, GCurrentClasses.class, false, bodyLayout);
     }
 }

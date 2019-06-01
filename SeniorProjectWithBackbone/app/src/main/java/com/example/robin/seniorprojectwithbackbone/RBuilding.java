@@ -43,6 +43,7 @@ public class RBuilding extends AppActivityBuilderMethods {
         textViewBuilder("Human Resources (HR): Location R130(425) | Fax 564-3173", bodyLayout);
         phoneBuilder("HR", "564-2274(425)", bodyLayout);
         activityButtonBuilder("ABE", RBuilding.this, RABEMain.class, true, bodyLayout);
+        activityButtonBuilder("Classes in Building", RBuilding.this, RCurrentClasses.class, false, bodyLayout);
 
 
     }

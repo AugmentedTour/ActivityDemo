@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.robin.seniorprojectwithbackbone">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,10 +22,12 @@
         <activity android:name=".Example" />
         <!-- E building -->
         <activity android:name=".EBuilding" />
+        <activity android:name=".ECurrentClasses" />
         <!-- F building -->
         <activity android:name=".FBuilding" />
         <!-- G building -->
         <activity android:name=".GBuilding" />
+        <activity android:name=".GCurrentClasses" />
         <!-- Housing building -->
         <activity android:name=".HousingBuilding" />
         <activity android:name=".HousingGeneralInformation" />
@@ -35,6 +38,7 @@
         <activity android:name=".LBuilding" />
         <activity android:name=".LScienceDivisionActivity" />
         <activity android:name=".LInteriorDesignActivity" />
+        <activity android:name=".LCurrentClasses" />
         <!-- Q building -->
         <activity android:name=".QBuilding" />
         <activity android:name=".QEarlyLearningTeacherEdMain" />
@@ -47,9 +51,13 @@
         <activity android:name=".RELIMain" />
         <activity android:name=".RELIPrograms" />
         <activity android:name=".RABEMain" />
+        <activity android:name=".RCurrentClasses" />
         <!-- S building -->
         <activity android:name=".SBuilding" />
         <activity android:name=".SScienceDepartments" />
+        <activity android:name=".SScienceAdvising" />
+        <activity android:name=".SScienceStudyCenter" />
+        <activity android:name=".SCurrentClasses" />
         <!-- U building -->
         <activity android:name=".UBuilding" />
 

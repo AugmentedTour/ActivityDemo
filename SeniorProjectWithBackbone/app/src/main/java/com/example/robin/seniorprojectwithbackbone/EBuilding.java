@@ -36,5 +36,6 @@ public class EBuilding extends AppActivityBuilderMethods {
         // --- bodyLayout ---
         textViewBuilder(info, bodyLayout);
         linkButtonBuilder("Carlson Theatre History", "https://www.bellevuecollege.edu/theatrearts/carlson-theatre/", true, bodyLayout);
+        activityButtonBuilder("Classes in Building", EBuilding.this, ECurrentClasses.class, false, bodyLayout);
     }
 }

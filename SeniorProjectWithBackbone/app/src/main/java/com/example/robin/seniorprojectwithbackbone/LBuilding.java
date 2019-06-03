@@ -29,6 +29,7 @@ public class LBuilding extends AppActivityBuilderMethods {
         InteriorDesign = (Button)findViewById(R.id.interior_design);
 
 
+
         ScienceDevision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +72,9 @@ public class LBuilding extends AppActivityBuilderMethods {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l_building);
         init();
+
+
+
     }
 
 }

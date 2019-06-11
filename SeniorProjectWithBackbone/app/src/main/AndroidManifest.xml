@@ -20,6 +20,9 @@
         <activity android:name=".BuildingSelect"/>
         <activity android:name=".HelpActivity" />
         <activity android:name=".Example" />
+        <!-- C building -->
+        <activity android:name=".CBuilding" />
+        <activity android:name=".CCurrentClasses" />
         <!-- E building -->
         <activity android:name=".EBuilding" />
         <activity android:name=".ECurrentClasses" />
@@ -58,6 +61,10 @@
         <activity android:name=".SScienceAdvising" />
         <activity android:name=".SScienceStudyCenter" />
         <activity android:name=".SCurrentClasses" />
+        <!-- T building -->
+        <activity android:name=".TBuilding" />
+        <activity android:name=".TCurrentClasses" />
+        <activity android:name=".THealthAdvising" />
         <!-- U building -->
         <activity android:name=".UBuilding" />
 

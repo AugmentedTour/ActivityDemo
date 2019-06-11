@@ -20,9 +20,23 @@
         <activity android:name=".BuildingSelect"/>
         <activity android:name=".HelpActivity" />
         <activity android:name=".Example" />
+        <!-- A building -->
+        <activity android:name=".ABuilding" />
+        <activity android:name=".ACurrentClasses" />
+        <activity android:name=".ABCFoundation" />
+        <activity android:name=".AIBIT" />
+        <!-- B building -->
+        <activity android:name=".BBuilding" />
+        <activity android:name=".BCurrentClasses" />
         <!-- C building -->
         <activity android:name=".CBuilding" />
         <activity android:name=".CCurrentClasses" />
+        <!-- D building -->
+        <activity android:name=".DBuilding" />
+        <activity android:name=".DCurrentClasses" />
+        <activity android:name=".DLMC" />
+        <activity android:name=".DSafety" />
+        <activity android:name=".DASC" />
         <!-- E building -->
         <activity android:name=".EBuilding" />
         <activity android:name=".ECurrentClasses" />
@@ -42,6 +56,9 @@
         <activity android:name=".LScienceDivisionActivity" />
         <activity android:name=".LInteriorDesignActivity" />
         <activity android:name=".LCurrentClasses" />
+        <!-- N building -->
+        <activity android:name=".NBuilding" />
+        <activity android:name=".NCurrentClasses" />
         <!-- Q building -->
         <activity android:name=".QBuilding" />
         <activity android:name=".QEarlyLearningTeacherEdMain" />
